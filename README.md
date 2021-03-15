@@ -1,5 +1,3 @@
 # TinyGo
 
-Arch Linux:
-  Install tinygo, uucp
-  Dialout permissions: sudo gpasswd -a [USER] uucp
+A repository for experiments in implementing Go on microcontrollers utilizing TinyGo
