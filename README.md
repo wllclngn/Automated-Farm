@@ -1,3 +1,5 @@
 # TinyGo
 
-Storage for experiments w/ concurrency, microcontrollers and TinyGo.
+Arch Linux:
+  Install tinygo, uucp
+  Dialout permissions: sudo gpasswd -a [USER] uucp
