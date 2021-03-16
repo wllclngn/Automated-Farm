@@ -9,35 +9,37 @@ func main() {
     led := machine.LED
     led.Configure(machine.PinConfig{Mode: machine.PinOutput})
     num := 0
+    timing := func() {
+        time.Sleep(time.Millisecond * 250)
+    }
     for {
         if (num % 2) == 0 {
             led.Low()
-            time.Sleep(time.Millisecond * 250)
+            timing()
         
             led.High()
-            time.Sleep(time.Millisecond * 250)
+            timing()
 
             led.Low()
-            time.Sleep(time.Millisecond * 200)
+            timing()
         
             led.High()
-            time.Sleep(time.Millisecond * 250)
+            timing()
 
             led.Low()
-            time.Sleep(time.Millisecond * 250)
+            timing()
             if (num == 100) {
                 num = 0
             }
         } else {
             led.Low()
-            time.Sleep(time.Millisecond * 250)
+            timing()
         
             led.High()
-            time.Sleep(time.Millisecond * 500)
+            timing()
 
             led.Low()
-            time.Sleep(time.Millisecond * 250)
-        
+            timing()
         }
         num++
     }
