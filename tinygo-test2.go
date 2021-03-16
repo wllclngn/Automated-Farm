@@ -27,10 +27,14 @@ func main() {
             }
         } else {
             led.Low()
-            time.Sleep(time.Millisecond * 500)
+            time.Sleep(time.Millisecond * 250)
         
             led.High()
             time.Sleep(time.Millisecond * 500)
+
+            led.Low()
+            time.Sleep(time.Millisecond * 250)
+        
         }
         num++
     }
