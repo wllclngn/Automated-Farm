@@ -18,13 +18,13 @@ func main() {
             timing()
         
             led.High()
-            timing()
+            time.Sleep(time.Millisecond * 200)
 
             led.Low()
-            timing()
+            time.Sleep(time.Millisecond * 100)
         
             led.High()
-            timing()
+            time.Sleep(time.Millisecond * 200)
 
             led.Low()
             timing()
@@ -36,7 +36,7 @@ func main() {
             timing()
         
             led.High()
-            timing()
+            time.Sleep(time.Millisecond * 500)
 
             led.Low()
             timing()
