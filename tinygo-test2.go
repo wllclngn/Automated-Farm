@@ -12,6 +12,9 @@ func main() {
     timing := func() {
         time.Sleep(time.Millisecond * 250)
     }
+    timingShort := func() {
+        time.Sleep(time.Millisecond * 100)
+    }
     for {
         if (num % 2) == 0 {
             led.Low()
@@ -19,13 +22,13 @@ func main() {
         
             led.High()
             time.Sleep(time.Millisecond * 200)
-
+        
             led.Low()
             time.Sleep(time.Millisecond * 100)
         
             led.High()
             time.Sleep(time.Millisecond * 200)
-
+        
             led.Low()
             timing()
             if (num == 100) {
@@ -37,7 +40,7 @@ func main() {
         
             led.High()
             time.Sleep(time.Millisecond * 500)
-
+        
             led.Low()
             timing()
         }
