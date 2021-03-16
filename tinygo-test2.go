@@ -12,9 +12,6 @@ func main() {
     timing := func() {
         time.Sleep(time.Millisecond * 250)
     }
-    timingShort := func() {
-        time.Sleep(time.Millisecond * 100)
-    }
     for {
         if (num % 2) == 0 {
             led.Low()
