@@ -15,13 +15,13 @@ func main() {
             time.Sleep(time.Millisecond * 250)
         
             led.High()
-            time.Sleep(time.Millisecond * 275)
+            time.Sleep(time.Millisecond * 250)
 
             led.Low()
-            time.Sleep(time.Millisecond * 100)
+            time.Sleep(time.Millisecond * 200)
         
             led.High()
-            time.Sleep(time.Millisecond * 275)
+            time.Sleep(time.Millisecond * 250)
 
             led.Low()
             time.Sleep(time.Millisecond * 250)
