@@ -6,11 +6,6 @@ import (
     "sync"
 )
 
-/*
-  CONCURRENT LED
-  */
-
-
 func main() {
     led := machine.LED
     led.Configure(machine.PinConfig{Mode: machine.PinOutput})
@@ -20,24 +15,24 @@ func main() {
 
     go func() {
         defer wg.Done()
-        for i := 0; i < 10; i++ {
+        for i := 0; i < 100; i++ {
             led.Low()
-            time.Sleep(time.Millisecond * 500)
+            time.Sleep(time.Millisecond * 250)
 
             led.High()
             time.Sleep(time.Millisecond * 500)
 
             led.Low()
-            time.Sleep(time.Millisecond * 500)
+            time.Sleep(time.Millisecond * 250)
         }
     }()
 
     go func() {
         defer wg.Done()
-        for j := 0; j < 10; j++ {
+        for j := 0; j < 100; j++ {
 
             led.Low()
-            time.Sleep(time.Millisecond * 100)
+            time.Sleep(time.Millisecond * 250)
 
             led.High()
             time.Sleep(time.Millisecond * 200)
@@ -49,10 +44,7 @@ func main() {
             time.Sleep(time.Millisecond * 200)
 
             led.Low()
-            time.Sleep(time.Millisecond * 100)
-
-            led.High()
-            time.Sleep(time.Millisecond * 200)
+            time.Sleep(time.Millisecond * 250)
         }
     }()
     wg.Wait()
