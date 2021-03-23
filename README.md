@@ -1,4 +1,4 @@
-<img src='golang-gopher-tinygo.png' height="299" \>
+<img src='golang-gopher-tinygo.png' height="299" />
 
 # TinyGo
 
